@@ -69,17 +69,21 @@ Components
   height: 60px;
   background-color: #f4f4f4;
   border-bottom: 1px solid silver; }
+  .primary-header a {
+    display: inline-block;
+    float: left;
+    width: 14.3%; }
   .primary-header img.logo {
     height: 60px;
     width: 112px;
     float: left;
     border-bottom: 1px solid silver; }
   .primary-header > div {
-    position: relative;
+    display: inline-block;
     height: 60px;
+    width: calc(100% - 14.3%);
     font-size: 25px;
-    color: #ABABAB;
-    padding: 0; }
+    color: #ABABAB; }
     .primary-header > div div:first-child div:first-child {
       display: none;
       position: absolute;
@@ -133,7 +137,7 @@ Components
   .primary-header {
     position: static; }
     .primary-header img.logo {
-      width: 14.3%; }
+      width: 100%; }
   .primary-header > div div:first-child div:last-child {
     right: 215px; }
     .primary-header > div div:first-child div:last-child input {

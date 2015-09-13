@@ -7,6 +7,12 @@
 	background-color: rgb(244, 244, 244);
 	border-bottom: 1px solid rgb(192, 192, 192);
 
+	a {
+		display: inline-block;
+		float: left;
+		width: 14.3%;
+	}
+
 	img.logo {
 		height: $header-height;
 		width: 112px;
@@ -15,13 +21,14 @@
 	}
 
 	> div {
-		position: relative;
+		display: inline-block;
 		height: $header-height;
+		width: calc(100% - 14.3%);
 		font-size: 25px;
 		color: #ABABAB;
-		padding: 0;
 
 		div:first-child {
+
 
 			div:first-child {
 				display: none;
@@ -57,6 +64,7 @@
 		}
 
 		div:last-child {
+
 			position: absolute;
 			right: 35px;
 			margin-left: 20px;
@@ -105,7 +113,7 @@
 		position: static;
 		
 		img.logo {
-			width: 14.3%;;
+			width: 100%;
 		}
 	}
 
