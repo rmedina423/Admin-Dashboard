@@ -54,7 +54,7 @@ section {
     display: initial;
     flex: 1; }
   section {
-    flex: 5; }
+    flex: 6; }
     section .components {
       margin: 30px; } }
 
@@ -83,7 +83,7 @@ Components
     .primary-header > div div:first-child div:first-child {
       display: none;
       position: absolute;
-      left: 16.64%;
+      left: 15%;
       top: 15px;
       margin-left: 20px; }
     .primary-header > div div:first-child div:last-child {
@@ -133,7 +133,7 @@ Components
   .primary-header {
     position: static; }
     .primary-header img.logo {
-      width: 16.64%; }
+      width: 14.3%; }
   .primary-header > div div:first-child div:last-child {
     right: 215px; }
     .primary-header > div div:first-child div:last-child input {
@@ -152,24 +152,28 @@ Components
     display: initial; } }
 
 aside {
-  background-color: #313131; }
+  background-color: #313131;
+  color: #b7b7b7; }
   aside a {
     display: block;
     text-transform: uppercase;
-    padding: 18px 25px;
+    padding: 18px 15px;
     font-weight: bold;
     font-size: 13px; }
   aside h2 {
     display: inline;
     text-transform: uppercase;
-    margin-left: 8px; }
+    margin-left: 8px;
+    font-size: 12px; }
   aside .fa {
+    margin-left: 5px;
     font-size: 20px; }
 
 .selected {
   background-color: #e4e4e4;
   color: #747474;
-  border-left: 10px solid #3CB66E; }
+  border-left: 10px solid #3CB66E;
+  padding-left: 5px; }
 
 .primary-components {
   display: flex;

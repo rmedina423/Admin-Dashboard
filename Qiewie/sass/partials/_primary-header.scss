@@ -6,6 +6,7 @@
 	height: $header-height;
 	background-color: rgb(244, 244, 244);
 	border-bottom: 1px solid rgb(192, 192, 192);
+
 	img.logo {
 		height: $header-height;
 		width: 112px;
@@ -25,7 +26,7 @@
 			div:first-child {
 				display: none;
 				position: absolute;
-				left: 16.64%;
+				left: 15%;
 				top: 15px;
 				margin-left: 20px;
 			}
@@ -104,7 +105,7 @@
 		position: static;
 		
 		img.logo {
-			width: 16.64%;
+			width: 14.3%;;
 		}
 	}
 
