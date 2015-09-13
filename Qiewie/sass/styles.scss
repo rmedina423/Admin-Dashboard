@@ -1,0 +1,34 @@
+/****************************************
+  Vars
+*****************************************/
+
+@import 'partials/variables';
+
+/****************************************
+  Inherited Syles
+*****************************************/
+
+@import 'partials/inherited-styles';
+
+/****************************************
+  Defaults
+*****************************************/
+@import 'partials/defaults';
+
+
+/****************************************
+  Primary Layout
+*****************************************/
+
+@import 'partials/primary-layout';
+
+/****************************************
+Components
+*****************************************/
+
+@import 'partials/primary-header';
+@import 'partials/aside';
+
+@import 'partials/primary-components';
+@import 'partials/secondary-components';
+@import 'partials/tertiary-components';

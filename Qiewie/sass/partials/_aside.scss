@@ -1,0 +1,27 @@
+aside {
+	background-color: rgb(49, 49, 49);
+
+	a {
+		display: block;
+		text-transform: uppercase;
+		padding: 18px 25px;
+		font-weight: bold;
+		font-size: 13px;
+	}
+
+	h2 {
+		display: inline;
+		text-transform: uppercase;
+		margin-left: 8px;
+	}
+
+	.fa {
+		font-size: 20px;
+	}
+}
+
+.selected {
+	background-color: #e4e4e4;
+	color: #747474;
+	border-left: 10px solid #3CB66E;
+}

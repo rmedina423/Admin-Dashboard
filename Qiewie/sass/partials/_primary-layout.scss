@@ -1,0 +1,42 @@
+main {
+	padding-top: $header-height;
+}
+
+aside {
+	display: none;
+}
+
+section {
+	background-color: rgb(228, 228, 228);
+
+	.components {
+		margin: 0;
+		background: radial-gradient(#f4f4f4, #f1f1f1);
+		box-shadow: 0 0 10px -5px black;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	main {
+		padding: initial;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	main {
+		display: flex;
+	}
+
+	aside {
+		display: initial;
+		flex: 1;
+	}
+
+	section {
+		flex: 5;
+
+		.components {
+			margin: $component-margin;
+		}
+	}
+}

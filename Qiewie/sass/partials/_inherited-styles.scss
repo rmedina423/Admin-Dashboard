@@ -1,0 +1,12 @@
+html {
+	box-sizing: border-box;
+	color: #DFDFDF;
+	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+	font-weight: 300;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	color: inherit;
+	font: inherit;
+}

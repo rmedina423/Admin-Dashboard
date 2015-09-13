@@ -1,0 +1,117 @@
+.primary-components {
+	display: flex;
+	flex-direction: column;
+	min-height: 380px;
+	
+	.component {
+		background-color: #2a2a2a;
+		flex: 1;
+		min-height: calc(100% - 60px);
+		text-align: center;
+	}
+}
+
+.primary-components .component {
+	header {
+		margin: 0 15px;
+		border-bottom: 2px solid rgb(98, 98, 98);
+	}
+
+	h1 {
+		display: inline-block;
+		margin: 10px 0 5px 0;
+		border-bottom: 2px solid rgb(66, 66, 66);
+		padding: 15px;
+		font-weight: bold;
+	}
+
+	#statistics {
+		margin: 10px 0 0 0;
+		font-size: 45px;
+  		font-weight: bold;
+	}
+
+	.outer-border {
+		text-align: center;
+		margin: auto;
+		margin-top: 20px;
+		width: 85px;
+		height: 85px;
+		border: 2px solid rgb(114, 114, 114);
+		border-radius: 50%;
+	}
+
+	.icon {
+		display: inline-block;
+		height: 65px;
+		width: 65px;
+		margin-top: 8px;
+		border: 2px solid;
+		border-radius: 50%;
+	}
+
+	.fa {
+		margin-top: 17px;
+		font-size: 26px;
+	}
+
+	a {
+		background-color: #54EFD1;
+		display: inline-block;
+		margin: 25px 0 10px 0;
+		padding: 10px 30px;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.primary-components .component:first-child {
+	.icon {
+		border-color: #005B80;
+	}
+
+	a {
+		background-color: #005B80;
+	}
+}
+.primary-components .component:nth-child(2) {
+	.icon {
+		border-color: #3CB66E;
+	}
+
+	a {
+		background-color: #3CB66E;
+	}
+}
+.primary-components .component:last-child {
+	.icon {
+		border-color: #287263;
+	}
+
+	a {
+		background-color: #287263;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.primary-components {
+		flex-direction: row;
+
+		* + * {
+			margin-left: $component-margin;
+		}
+		
+		.component {
+			margin-top: $component-margin;
+			margin-bottom: $component-margin;
+		}
+
+		.component:first-child {
+			margin-left: $component-margin;
+		}
+
+		.component:last-child {
+			margin-right: $component-margin
+		}
+	}
+}
