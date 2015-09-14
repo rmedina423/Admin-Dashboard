@@ -31,7 +31,7 @@ a {
   Primary Layout
 *****************************************/
 main {
-  padding-top: 60px; }
+  padding-top: 56px; }
 
 aside {
   display: none; }
@@ -62,98 +62,56 @@ section {
 Components
 *****************************************/
 .primary-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 60px;
   background-color: #f4f4f4;
-  border-bottom: 1px solid silver; }
-  .primary-header a {
-    display: inline-block;
-    float: left;
-    width: 14.3%; }
-  .primary-header img.logo {
-    height: 60px;
-    width: 112px;
-    float: left;
-    border-bottom: 1px solid silver; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 0 8px;
+  font-size: 21px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden; }
   .primary-header > div {
-    display: inline-block;
-    height: 60px;
-    width: calc(100% - 14.3%);
-    font-size: 25px;
-    color: #ABABAB; }
-    .primary-header > div div:first-child div:first-child {
-      display: none;
-      position: absolute;
-      left: 15%;
-      top: 15px;
-      margin-left: 20px; }
-    .primary-header > div div:first-child div:last-child {
-      position: absolute;
-      right: 150px;
-      top: 15px;
-      border-right: 1px solid; }
-      .primary-header > div div:first-child div:last-child .fa {
-        font-size: 20px;
-        margin-right: 15px; }
-      .primary-header > div div:first-child div:last-child input {
-        display: none;
-        width: 120px;
-        border: none;
-        background-color: #f4f4f4;
-        font-size: 15px; }
-      .primary-header > div div:first-child div:last-child input:focus {
-        outline: none; }
-    .primary-header > div div:last-child {
-      position: absolute;
-      right: 35px;
-      margin-left: 20px; }
-      .primary-header > div div:last-child img.profile-pic {
-        height: 50px;
-        border-radius: 50%;
-        margin-top: 5px;
-        float: left; }
-      .primary-header > div div:last-child span {
+    display: flex;
+    align-items: center;
+    height: 56px; }
+    .primary-header > div .navigation {
+      height: 48px;
+      width: 48px;
+      text-align: center;
+      position: relative; }
+      .primary-header > div .navigation span {
+        position: relative;
         display: inline-block;
-        margin-top: 17px;
-        cursor: pointer;
-        margin-left: 20px; }
-        .primary-header > div div:last-child span h1 {
-          display: none;
-          color: #ABABAB; }
-        .primary-header > div div:last-child span .fa:hover {
-          color: #2a2a2a; }
-  .primary-header h1 {
-    display: inline-block;
-    color: #515151; }
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer; }
+    .primary-header > div .home {
+      flex: 1;
+      margin-left: 12px; }
+      .primary-header > div .home img {
+        width: 98px;
+        height: 46px;
+        margin-top: 4px;
+        cursor: pointer; }
+    .primary-header > div .search .fa-search {
+      width: 44px;
+      height: 44px;
+      padding: 8px;
+      margin: 0 8px;
+      font-size: 27px;
+      cursor: pointer; }
+    .primary-header > div a img {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 8px;
+      border-radius: 50%; }
 
-@media screen and (max-width: 390px) {
-  .primary-header img.logo {
-    width: 30%; } }
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   .primary-header {
-    position: static; }
-    .primary-header img.logo {
-      width: 100%; }
-  .primary-header > div div:first-child div:last-child {
-    right: 215px; }
-    .primary-header > div div:first-child div:last-child input {
-      display: initial; }
-  .primary-header > div div:last-child span h1 {
-    display: initial;
-    margin-right: 20px;
-    font-size: 20px;
-    color: #ABABAB; } }
-
-@media screen and (min-width: 850px) {
-  .primary-header img.logo {
-    background-color: #2a2a2a;
-    border-bottom: none; }
-  .primary-header > div div:first-child div:first-child {
-    display: initial; } }
+    background-color: blue; } }
 
 aside {
   background-color: #313131;
