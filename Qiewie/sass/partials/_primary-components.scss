@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 380px;
+
 	
 	.component {
 		background-color: #2a2a2a;
@@ -58,7 +59,7 @@
 	a {
 		background-color: #54EFD1;
 		display: inline-block;
-		margin: 25px 0 10px 0;
+		margin: 25px 0 35px 0;
 		padding: 10px 30px;
 		text-transform: uppercase;
 		font-size: 14px;
@@ -93,31 +94,20 @@
 	}
 }
 
-@media screen and (min-width: 700px) {
-	.primary-components {
-		width: calc(100% - 2*16px);
-	}
+@media screen and (min-width: 440px) {
+		.primary-components * + * {
+			margin-top: 16px;
+		}
 }
 
 @media screen and (min-width: 700px) {
 	.primary-components {
 		flex-direction: row;
+		padding: $component-margin;
 
 		* + * {
-			margin-left: $component-margin;
-		}
-		
-		.component {
-			margin-top: $component-margin;
-			margin-bottom: $component-margin;
+			margin: 0 0 0 $component-margin;
 		}
 
-		.component:first-child {
-			margin-left: $component-margin;
-		}
-
-		.component:last-child {
-			margin-right: $component-margin
-		}
 	}
 }

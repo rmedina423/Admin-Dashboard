@@ -6,6 +6,7 @@ var chart = function (loggedInUsers) {
 
         chart: {
             type: 'gauge',
+            backgroundColor: 'transparent',
             plotBackgroundColor: null,
             plotBackgroundImage: null,
             plotBorderWidth: 0,
@@ -51,6 +52,13 @@ var chart = function (loggedInUsers) {
 
         // the value axis
         yAxis: {
+            dataLabels: {
+                align: 'left',
+                enabled: true,
+                style: {
+                    fontSize: '22px'
+                }
+            },
             min: 0,
             max: 50000,
 
@@ -87,11 +95,19 @@ var chart = function (loggedInUsers) {
         series: [{
             name: 'Users Logged in Now',
             data: [loggedInUsers],
-        }]
+            dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '22px'
+                    }
+                }
+        }],
+
+        credits: {
+           enabled: false
+        }
 
     })
-
-    $('rect.highcharts-background').remove()
 
 }
 

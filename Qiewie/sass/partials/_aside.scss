@@ -1,6 +1,7 @@
 aside {
 	background-color: #313131;
 	color: rgba(183, 183, 183, 1);
+	text-align: left;
 
 	a {
 		display: block;
@@ -11,10 +12,10 @@ aside {
 	}
 
 	h2 {
-		display: inline;
+		display: inline-block;
 		text-transform: uppercase;
 		margin-left: 8px;
-		font-size: 12px;
+		font-size: 11px;
 	}
 
 	.fa {
@@ -28,4 +29,10 @@ aside {
 	color: #747474;
 	border-left: 10px solid #3CB66E;
 	padding-left: 5px;
+}
+
+@media screen and (max-width: 1087px) {
+	aside h2 {
+		width: 55px;
+	}
 }

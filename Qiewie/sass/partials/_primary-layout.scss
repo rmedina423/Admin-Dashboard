@@ -1,5 +1,10 @@
+body {
+	background-color: #e4e4e4;
+}
+
 main {
-	padding-top: $header-height;
+	margin-top: 56px;
+	text-align: center;
 }
 
 aside {
@@ -7,12 +12,22 @@ aside {
 }
 
 section {
-	background-color: rgb(228, 228, 228);
-
+	
 	.components {
 		margin: 0;
 		background: radial-gradient(#f4f4f4, #f1f1f1);
-		box-shadow: 0 0 10px -5px black;
+		box-shadow: 0 1px 8px rgba(0,0,0,.3);
+	}
+}
+
+@media screen and (min-width: 440px) {
+	main {
+		margin-top: calc(56px + (16px));
+	}
+
+	section {
+		display: inline-block;
+		width: calc(100% - 2*16px);
 	}
 }
 
@@ -25,6 +40,7 @@ section {
 @media screen and (min-width: 850px) {
 	main {
 		display: flex;
+		margin-top: $header-height;
 	}
 
 	aside {
@@ -38,5 +54,11 @@ section {
 		.components {
 			margin: $component-margin;
 		}
+	}
+}
+
+@media screen and (max-width: 1090px) {
+	section {
+		flex: 5;
 	}
 }

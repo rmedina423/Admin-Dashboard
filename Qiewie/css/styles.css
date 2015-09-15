@@ -30,18 +30,27 @@ a {
 /****************************************
   Primary Layout
 *****************************************/
+body {
+  background-color: #e4e4e4; }
+
 main {
-  padding-top: 56px; }
+  margin-top: 56px;
+  text-align: center; }
 
 aside {
   display: none; }
 
-section {
-  background-color: #e4e4e4; }
-  section .components {
-    margin: 0;
-    background: radial-gradient(#f4f4f4, #f1f1f1);
-    box-shadow: 0 0 10px -5px black; }
+section .components {
+  margin: 0;
+  background: radial-gradient(#f4f4f4, #f1f1f1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }
+
+@media screen and (min-width: 440px) {
+  main {
+    margin-top: calc(56px + (16px)); }
+  section {
+    display: inline-block;
+    width: calc(100% - 2*16px); } }
 
 @media screen and (min-width: 700px) {
   main {
@@ -49,7 +58,8 @@ section {
 
 @media screen and (min-width: 850px) {
   main {
-    display: flex; }
+    display: flex;
+    margin-top: 56px; }
   aside {
     display: initial;
     flex: 1; }
@@ -57,6 +67,10 @@ section {
     flex: 6; }
     section .components {
       margin: 30px; } }
+
+@media screen and (max-width: 1090px) {
+  section {
+    flex: 5; } }
 
 /****************************************
 Components
@@ -109,13 +123,10 @@ Components
       margin: 8px;
       border-radius: 50%; }
 
-@media screen and (min-width: 600px) {
-  .primary-header {
-    background-color: blue; } }
-
 aside {
   background-color: #313131;
-  color: #b7b7b7; }
+  color: #b7b7b7;
+  text-align: left; }
   aside a {
     display: block;
     text-transform: uppercase;
@@ -123,10 +134,10 @@ aside {
     font-weight: bold;
     font-size: 13px; }
   aside h2 {
-    display: inline;
+    display: inline-block;
     text-transform: uppercase;
     margin-left: 8px;
-    font-size: 12px; }
+    font-size: 11px; }
   aside .fa {
     margin-left: 5px;
     font-size: 20px; }
@@ -136,6 +147,10 @@ aside {
   color: #747474;
   border-left: 10px solid #3CB66E;
   padding-left: 5px; }
+
+@media screen and (max-width: 1087px) {
+  aside h2 {
+    width: 55px; } }
 
 .primary-components {
   display: flex;
@@ -187,7 +202,7 @@ aside {
 .primary-components .component a {
   background-color: #54EFD1;
   display: inline-block;
-  margin: 25px 0 10px 0;
+  margin: 25px 0 35px 0;
   padding: 10px 30px;
   text-transform: uppercase;
   font-size: 14px; }
@@ -210,22 +225,16 @@ aside {
 .primary-components .component:last-child a {
   background-color: #287263; }
 
-@media screen and (min-width: 700px) {
-  .primary-components {
-    width: calc(100% - 2*16px); } }
+@media screen and (min-width: 440px) {
+  .primary-components * + * {
+    margin-top: 16px; } }
 
 @media screen and (min-width: 700px) {
   .primary-components {
-    flex-direction: row; }
+    flex-direction: row;
+    padding: 30px; }
     .primary-components * + * {
-      margin-left: 30px; }
-    .primary-components .component {
-      margin-top: 30px;
-      margin-bottom: 30px; }
-    .primary-components .component:first-child {
-      margin-left: 30px; }
-    .primary-components .component:last-child {
-      margin-right: 30px; } }
+      margin: 0 0 0 30px; } }
 
 .secondary-components {
   min-height: 210px; }
@@ -239,12 +248,12 @@ aside {
   .secondary-components .component-container {
     display: flex;
     flex-direction: column;
-    padding: 30px 30px 30px 0; }
+    padding: 30px; }
   .secondary-components .component {
     min-height: 105px;
     flex: 1;
-    margin-left: 30px;
-    text-align: right; }
+    text-align: right;
+    white-space: nowrap; }
 
 .secondary-components .component .statistics {
   text-align: left;
@@ -276,53 +285,51 @@ aside {
 .secondary-components .component span {
   display: inline-block; }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 440px) {
+  main .secondary-components {
+    background-color: #f4f4f4;
+    margin: 16px 0; } }
+
+@media screen and (min-width: 775px) {
   .secondary-components .component-container {
-    flex-direction: row; } }
+    flex-direction: row; }
+    .secondary-components .component-container * + * {
+      margin-left: 30px; }
+    .secondary-components .component-container h1 {
+      margin-left: 5px; } }
+
+@media screen and (min-width: 850px) {
+  main .secondary-components {
+    margin: 0 30px; } }
+
+section .tertiary-components {
+  box-shadow: initial;
+  background: #E4E4E4; }
+  section .tertiary-components > div {
+    background-color: #F4F4F4; }
 
 .tertiary-header {
   background-color: #2a2a2a;
   font-size: 20px;
   font-weight: bold;
-  color: #DFDFDF;
-  display: flex;
-  flex-direction: column; }
+  color: #DFDFDF; }
   .tertiary-header h1 {
     text-align: center;
-    margin-top: 8px; }
-  .tertiary-header h1:first-child {
-    flex: 1; }
-  .tertiary-header h1:last-child {
-    flex: 1;
-    margin-bottom: 8px; }
+    padding: 8px 0; }
 
-.tertiary-components {
-  height: 320px;
-  display: flex;
-  margin-top: 0 !important;
-  flex-direction: column; }
-  .tertiary-components .component {
-    height: 100%; }
-  .tertiary-components .component:first-child {
-    flex: 2;
-    background: radial-gradient(#f4f4f4, #E4E4E4); }
-  .tertiary-components .component:last-child {
-    flex: 3; }
+#map {
+  height: 400px; }
 
-@media screen and (min-width: 700px) {
-  .tertiary-header {
-    flex-direction: row; }
+@media screen and (min-width: 440px) {
+  .tertiary-components > div {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); }
+    .tertiary-components > div:last-child {
+      margin: 16px 0; } }
+
+@media screen and (min-width: 880px) {
   .tertiary-components {
-    flex-direction: row; } }
-
-@media screen and (min-width: 850px) {
-  .tertiary-header {
-    margin: 0 30px 0 30px; }
-    .tertiary-header h1:first-child {
-      flex: 2; }
-    .tertiary-header h1:last-child {
-      flex: 3; }
-  .tertiary-components .component:first-child {
-    flex: 2; }
-  .tertiary-components .component:last-child {
-    flex: 3; } }
+    display: flex; }
+    .tertiary-components > div:first-child, .tertiary-components > div:last-child {
+      flex: 1; }
+    .tertiary-components > div:last-child {
+      margin: 0 0 0 30px; } }
