@@ -25,6 +25,7 @@ h1, h2 {
   margin: 0; }
 
 a {
+  display: inline-block;
   text-decoration: none; }
 
 /****************************************
@@ -109,6 +110,12 @@ Components
         height: 46px;
         margin-top: 4px;
         cursor: pointer; }
+    .primary-header > div .search {
+      align-items: center; }
+      .primary-header > div .search div:first-child {
+        display: none; }
+      .primary-header > div .search input {
+        display: none; }
     .primary-header > div .search .fa-search {
       width: 44px;
       height: 44px;
@@ -116,12 +123,77 @@ Components
       margin: 0 8px;
       font-size: 27px;
       cursor: pointer; }
+    .primary-header > div .account div {
+      display: none; }
     .primary-header > div a img {
-      display: block;
+      display: inline-block;
       width: 30px;
       height: 30px;
       margin: 8px;
       border-radius: 50%; }
+
+@media screen and (min-width: 850px) {
+  .primary-header {
+    padding: 0 30px 0 0; }
+    .primary-header > div {
+      color: #ABABAB; }
+      .primary-header > div .navigation {
+        display: none; }
+      .primary-header > div .home {
+        flex: initial;
+        display: inline-block;
+        margin: 0;
+        height: 100%;
+        width: 17.278%;
+        background-color: #2a2a2a; }
+        .primary-header > div .home img {
+          width: 69%;
+          height: calc(100% - 4px);
+          margin: 4px 0 0 15px;
+          cursor: pointer; }
+      .primary-header > div .search {
+        flex: 1;
+        display: flex;
+        padding: 0 30px;
+        height: 100%;
+        border-right: 1px solid; }
+        .primary-header > div .search .fa-search {
+          width: 37px;
+          height: 37px;
+          padding: 8px;
+          font-size: 20px; }
+        .primary-header > div .search input {
+          display: initial;
+          width: 48px;
+          border: none;
+          background-color: #f4f4f4;
+          font-size: 15px; }
+        .primary-header > div .search input:focus {
+          outline: none; }
+        .primary-header > div .search div:first-child {
+          display: initial;
+          flex: 1; }
+        .primary-header > div .search div:last-child {
+          flex: 1;
+          text-align: right; }
+      .primary-header > div .account {
+        width: 150px;
+        padding-left: 15px; }
+        .primary-header > div .account a {
+          float: left; }
+        .primary-header > div .account img.profile-pic {
+          height: 40px;
+          width: 40px; }
+        .primary-header > div .account div {
+          display: inline-block;
+          margin: 20px 0 0 5px; }
+  .primary-header .search div:first-child h1 {
+    display: inline-block;
+    color: #515151; } }
+
+@media screen and (min-width: 1090px) {
+  .primary-header > div .home {
+    width: 14.628%; } }
 
 aside {
   background-color: #313131;
@@ -137,7 +209,7 @@ aside {
     display: inline-block;
     text-transform: uppercase;
     margin-left: 8px;
-    font-size: 11px; }
+    font-size: 12px; }
   aside .fa {
     margin-left: 5px;
     font-size: 20px; }
@@ -145,8 +217,8 @@ aside {
 .selected {
   background-color: #e4e4e4;
   color: #747474;
-  border-left: 10px solid #3CB66E;
-  padding-left: 5px; }
+  border-left: 8px solid #3CB66E;
+  padding-left: 7px; }
 
 @media screen and (max-width: 1087px) {
   aside h2 {
