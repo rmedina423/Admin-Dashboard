@@ -10,6 +10,7 @@ var sass = require('gulp-sass')
 var jshint = require('gulp-jshint')
 var browserSync = require('browser-sync')
 var nodemon = require('gulp-nodemon')
+var autoprefixer = require('gulp-autoprefixer')
 
 
 /****************************************
@@ -42,12 +43,16 @@ gulp.task('lint', function() {
 
 
 /****************************************
-  SASS
+  SASS + Autoprefixer
 *****************************************/
 
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('./css'))
 })
 

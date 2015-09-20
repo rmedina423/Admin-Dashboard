@@ -1,4 +1,6 @@
 /* jshint node: true, asi: true */
+var $ = require('jquery')
+
 var Backbone = require('backbone')
 
 // App
@@ -61,6 +63,28 @@ $('aside a').click(function (event) {
     $('#title').html(headingName)
 
   }
+})
+
+$('.primary-header .search div:last-child').hover(function () {
+  var $input = $(this).find('input')
+  $input.addClass('search-active')
+
+  setTimeout(function () {
+    $input.removeClass('search-active')
+  }, 10000)
+})
+
+var $aside = $('aside')
+var $overlay = $('.main-overlay')
+
+$('.navigation').on('click', function () {
+  $aside.addClass('mobile-aside').css('display', 'initial')
+  $overlay.addClass('active-overlay')
+})
+
+$('.main-overlay').on('mousedown', function () {
+  $overlay.removeClass('active-overlay')
+  $aside.removeClass('mobile-aside').css('display', 'none')
 })
 
 // Initiate the router

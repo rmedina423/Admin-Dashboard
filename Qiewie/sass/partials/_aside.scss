@@ -24,6 +24,33 @@ aside {
 	}
 }
 
+.mobile-aside {
+	position: fixed;
+	top: 50%;
+	left: 10%;
+	right: 10%;
+	transform: translateY(-50%);
+	z-index: 3;
+	background-color: rgba(60, 182, 110, 0.80);
+	text-align: center;
+	color: #FFF;
+
+	.fa {
+		display: none;
+	}
+
+	a {
+		padding: 20px 15px;
+		border: none;
+	}
+
+	h2 {
+		width: initial;
+		letter-spacing: 1px;
+	}
+
+}
+
 .selected {
 	background-color: #e4e4e4;
 	color: #747474;

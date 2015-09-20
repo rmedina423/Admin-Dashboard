@@ -1,5 +1,5 @@
-var highcharts = require('/home/ryan/Sites/admin-dashboard/Qiewie/node_modules/highcharts/scripts/highcharts.js')
-var highcharts = require('/home/ryan/Sites/admin-dashboard/Qiewie/node_modules/highcharts/scripts/highcharts-more.js')
+var highcharts = require('../node_modules/highcharts/scripts/highcharts.js')
+var highcharts = require('../node_modules/highcharts/scripts/highcharts-more.js')
 
 var chart = function (loggedInUsers) {
     $('#chart').highcharts({
