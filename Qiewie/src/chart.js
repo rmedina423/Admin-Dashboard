@@ -98,7 +98,7 @@ var chart = function (loggedInUsers) {
             dataLabels: {
                     enabled: true,
                     style: {
-                        fontSize: '22px'
+                        fontSize: '15px'
                     }
                 }
         }],

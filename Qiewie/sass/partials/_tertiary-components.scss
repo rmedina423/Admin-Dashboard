@@ -1,50 +1,71 @@
 section .tertiary-components {
+	position: relative;
 	box-shadow: initial;
-	background: #E4E4E4;
+	background: $background-white;
 
-	> div {
-		background-color: #F4F4F4;
+	.tertiary-header {
+		padding: 12px;
+		margin: 0 12px;
+		border-bottom: 1px solid #DFDFDF;
+		font-size: 20px;
+		font-weight: bold;
+		color: #656262;
 	}
-}
 
+	header {
+		font-size: 20px;
+		font-weight: bold;
+		color: #656262;
 
-.tertiary-header {
-	background-color: #2a2a2a;
-	font-size: 20px;
-	font-weight: bold;
-	color: #DFDFDF;
-
-	h1 {
-		text-align: center;
-		padding: 8px 0;
+		h1 {
+			text-align: center;
+			padding: 14px 0;
+			background-color: $background-white;
+		}
 	}
-}
 
-#map {
-	height: 400px;
+	#map {
+		height: 350px;
+	}
+
+	#chart {
+		height: 325px;
+		background-color: $background-white;
+	}
 }
 
 @media screen and (min-width: 440px) {
-	.tertiary-components > div {
-		box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+	.tertiary-components .component-container {
+		background-color: $background-gray;
 
-		&:last-child {
-			margin: 16px 0;
+		> div {
+			box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+
+			&:last-child {
+				margin: 16px 0;
+			}
 		}
 	}
 
 }
 
 @media screen and (min-width: 880px) {
-	.tertiary-components {
+	.tertiary-components .component-container {
 		display: flex;
+		padding: 30px;
+		background-color: $background-white;;
 
-		> div:first-child, > div:last-child {
+		> div:first-child {
 			flex: 1;
+		}
+
+		> div:last-child {
+			flex: 2;
 		}
 
 		> div:last-child {
 			margin: 0 0 0 30px;
 		}
+
 	}
 }
