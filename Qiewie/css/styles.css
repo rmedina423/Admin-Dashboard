@@ -361,11 +361,11 @@ aside {
   height: 65px;
   width: 65px;
   margin-top: 8px;
-  border: 2px solid;
+  border: 3px solid;
   border-radius: 50%; }
 
 .primary-components .component .fa {
-  margin-top: 17px;
+  margin-top: 16px;
   font-size: 26px; }
 
 .primary-components .component a {
