@@ -32,7 +32,7 @@ a {
   Primary Layout
 *****************************************/
 body {
-  background-color: #e4e4e4; }
+  background-color: #E4E4E4; }
 
 .active-overlay {
   position: fixed;
@@ -101,7 +101,7 @@ section .components {
 Components
 *****************************************/
 .primary-header {
-  background-color: #f4f4f4;
+  background-color: #F2F2F2;
   position: fixed;
   top: 0;
   left: 0;
@@ -219,7 +219,7 @@ Components
           display: initial;
           width: 48px;
           border: none;
-          background-color: #f4f4f4;
+          background-color: #F2F2F2;
           font-size: 15px;
           -webkit-transition: width 0.5s;
           transition: width 0.5s; }
@@ -301,7 +301,7 @@ aside {
     letter-spacing: 1px; }
 
 .selected {
-  background-color: #e4e4e4;
+  background-color: #E4E4E4;
   color: #747474;
   border-left: 8px solid #3CB66E;
   padding-left: 7px; }
@@ -470,7 +470,7 @@ aside {
 
 @media screen and (min-width: 440px) {
   main .secondary-components {
-    background-color: #f4f4f4;
+    background-color: #F2F2F2;
     margin: 16px 0; } }
 
 @media screen and (min-width: 775px) {
@@ -489,34 +489,38 @@ aside {
   main .secondary-components {
     margin: 0 30px; } }
 
-.tertiary-components {
+section .tertiary-components {
   position: relative;
   box-shadow: initial;
-  background: #E4E4E4; }
-  .tertiary-components .tertiary-header {
+  background: #F2F2F2; }
+  section .tertiary-components .tertiary-header {
     padding: 12px;
     margin: 0 12px;
     border-bottom: 1px solid #DFDFDF;
     font-size: 20px;
     font-weight: bold;
     color: #656262; }
-  .tertiary-components header {
+  section .tertiary-components header {
     font-size: 20px;
     font-weight: bold;
     color: #656262; }
-    .tertiary-components header h1 {
+    section .tertiary-components header h1 {
       text-align: center;
-      padding: 14px 0; }
-  .tertiary-components #map {
+      padding: 14px 0;
+      background-color: #F2F2F2; }
+  section .tertiary-components #map {
     height: 350px; }
-  .tertiary-components #chart {
-    height: 325px; }
+  section .tertiary-components #chart {
+    height: 325px;
+    background-color: #F2F2F2; }
 
 @media screen and (min-width: 440px) {
-  .tertiary-components .component-container > div {
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); }
-    .tertiary-components .component-container > div:last-child {
-      margin: 16px 0; } }
+  .tertiary-components .component-container {
+    background-color: #E4E4E4; }
+    .tertiary-components .component-container > div {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); }
+      .tertiary-components .component-container > div:last-child {
+        margin: 16px 0; } }
 
 @media screen and (min-width: 880px) {
   .tertiary-components .component-container {
@@ -524,7 +528,8 @@ aside {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 30px; }
+    padding: 30px;
+    background-color: #F2F2F2; }
     .tertiary-components .component-container > div:first-child {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
